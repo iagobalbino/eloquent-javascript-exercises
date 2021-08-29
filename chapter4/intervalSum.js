@@ -1,21 +1,20 @@
 function range(start, end, increment = 1) {
   const arr = [];
-  
+
   if (increment < 0) {
-    for (start; start >= end; start -= increment) {
-      console.log(start);
+    for (start; start >= end; start += increment) { //end = end + increment;
       arr.push(start);
     }
   } else {
-  for (start; start <= end; start += increment) {
-    arr.push(start);
+    for (start; start <= end; start += increment) {
+      arr.push(start);
     }
   }
 
   return arr;
 }
 
-console.log(range(2, 10, 2));
+console.log(range(2, 10));
 
 function sum(arr) {
   let sum = 0;
@@ -27,4 +26,4 @@ function sum(arr) {
   // return arr.reduce((accumulator, currentValue) => accumulator + currentValue);
 }
 
-// console.log(sum(range(1, 10)));
+console.log(sum(range(1, 10)));
